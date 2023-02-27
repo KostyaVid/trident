@@ -1,0 +1,162 @@
+@import "./../../node_modules/swiper/swiper-bundle.min.css";
+
+.interior__head-title {
+  margin-top: 4rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+  }
+}
+.interior__title {
+  font-weight: 400;
+  margin-right: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+.interior__text {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+/* Style the tab */
+.tab {
+  margin-top: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}
+
+.tab button {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: var(--color-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  padding-right: 0.3rem;
+  border: var(--color-third) 1px solid;
+  border-right: var(--color-third) 0.7rem solid;
+  display: block;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 450px) {
+    margin-right: 0.2rem;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem;
+
+    border-right: var(--color-third) 0.4rem solid;
+  }
+}
+
+.tab button:last-child {
+  margin-right: 0;
+}
+
+.tab button.active {
+  background-color: var(--color-third);
+}
+
+.tabcontent {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  animation: fadeEffect 1s;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  @media (max-width: 768px) {
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tabcontent {
+  p {
+    margin-top: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.tab__swipe {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 48%;
+  float: right;
+  position: relative;
+  @media (max-width: 768px) {
+    float: none;
+    width: 100%;
+    margin: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.mySwiper .swiper-slide {
+  border: 2px var(--color-secondary) solid;
+}
+.mySwiper .swiper-slide-thumb-active {
+  border: 2px var(--color-third) solid;
+}
+.swiper__button {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: calc(50% - 1.5rem);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: calc(50% - 0.9rem);
+  }
+}
+.swiper__button_prev {
+  left: -1.5rem;
+  background-color: var(--color-primary);
+  @media (max-width: 1200px) {
+    left: 0rem;
+  }
+}
+.swiper__button_next {
+  right: -1.5rem;
+  background-color: var(--color-third);
+  @media (max-width: 1200px) {
+    right: 0rem;
+  }
+}

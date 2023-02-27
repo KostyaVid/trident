@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trident</title>
+    <meta name="description" content="Houses" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="#f5f5f5" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles/fontello.scss" />
+    <link rel="stylesheet" href="styles/global.scss" />
+    <link rel="stylesheet" href="styles/header.scss" />
+    <link rel="stylesheet" href="styles/home.scss" />
+    <link rel="stylesheet" href="styles/footer.scss" />
+    <link
+      rel="preload"
+      href="fonts/Lato-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="module" src="scripts/app.js"></script>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+
+    <include src="src/handlers/header.html"></include>
+    <!-- MAIN SECTION -->
+
+    <main class="main container">
+      <div class="hero">
+        <div class="swiper hero__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper__container">
+                <img
+                  height="576"
+                  width="1220"
+                  class="swiper-slide__img"
+                  src="img/house1.webp"
+                  alt="house"
+                />
+                <p class="swiper__text">
+                  A place that is more than an office – a place where you can
+                  create work-life balance
+                </p>
+                <div class="swiper__filter"></div>
+              </div>
+              <a href="#" class="swiper__link">Read me</a>
+              <a href="#" class="swiper__link_mobile">
+                A place that is more than an office – a place where you can
+                create work-life balance
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper__container">
+                <img
+                  height="576"
+                  width="1220"
+                  class="swiper-slide__img"
+                  src="img/house1.webp"
+                  alt="house"
+                  loading="lazy"
+                />
+                <p class="swiper__text">
+                  A place that is more than an office – a place where you can
+                  create work-life balance
+                </p>
+                <div class="swiper__filter"></div>
+              </div>
+              <a href="#" class="swiper__link">Read me</a>
+              <a href="#" class="swiper__link_mobile">
+                A place that is more than an office – a place where you can
+                create work-life balance
+              </a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="swiper__button swiper__button_prev"
+          id="swiper-hero__prev-id"
+          aria-label="previous slide"
+        >
+          <svg
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.98438 13.4297L1.98438 7.42969L7.98438 1.42969"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="next slide"
+          class="swiper__button swiper__button_next"
+          id="swiper-hero__next-id"
+        >
+          <svg
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.19531 13.4297L7.19531 7.42969L1.19531 1.42969"
+              stroke="#00204A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!--Design-->
+
+      <section class="designs">
+        <h1 class="designs__title">Our house designs</h1>
+        <div class="designs__filter">
+          <input
+            type="radio"
+            name="designs-button"
+            id="garden-rooms__id"
+            checked
+          />
+          <label class="designs__button" for="garden-rooms__id"
+            >Gerden rooms
+          </label>
+        </div>
+        <div class="designs__filter">
+          <input type="radio" name="designs-button" id="modular-rooms__id" />
+          <label class="designs__button" for="modular-rooms__id"
+            >Modular houses
+          </label>
+        </div>
+        <div class="designs__swiper-wrap" id="designs-garden__swiper_id">
+          <div class="swiper designs__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      width="386"
+                      height="218"
+                      alt="hose"
+                      class="swiper-slide__img"
+                      src="img/house2.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Garden Room</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      alt="house"
+                      width="386"
+                      height="218"
+                      class="swiper-slide__img"
+                      src="img/house3.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Garden Salon</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      alt="house"
+                      width="386"
+                      height="218"
+                      class="swiper-slide__img"
+                      src="img/house4.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Commercial Workspace</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      alt="house"
+                      width="386"
+                      height="218"
+                      class="swiper-slide__img"
+                      src="img/house5.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Garden Room</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="swiper__button swiper__button_prev"
+            id="swiper-designs__prev-id1"
+            aria-label="previous slide"
+          >
+            <svg
+              width="9"
+              height="15"
+              viewBox="0 0 9 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.98438 13.4297L1.98438 7.42969L7.98438 1.42969"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="swiper__button swiper__button_next"
+            id="swiper-designs__next-id1"
+            aria-label="next slide"
+          >
+            <svg
+              width="9"
+              height="15"
+              viewBox="0 0 9 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.19531 13.4297L7.19531 7.42969L1.19531 1.42969"
+                stroke="#00204A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="designs__swiper-wrap" id="designs-modular__swiper_id">
+          <div class="swiper designs__swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      width="386"
+                      height="218"
+                      alt="house"
+                      class="swiper-slide__img"
+                      src="img/house5.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Modular House</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      width="386"
+                      height="218"
+                      alt="house"
+                      class="swiper-slide__img"
+                      src="img/house7.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Modular House</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      width="386"
+                      height="218"
+                      alt="house"
+                      class="swiper-slide__img"
+                      src="img/house2.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Commercial Workspace</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__container">
+                  <a href="#">
+                    <img
+                      width="386"
+                      height="218"
+                      alt="house"
+                      class="swiper-slide__img"
+                      src="img/house3.webp"
+                      loading="lazy"
+                    />
+                    <h3 class="designs__swiper-title">Garden Room</h3>
+                    <p class="designs__swiper-text">
+                      A room where you can work, study, and design
+                    </p>
+                  </a>
+                </article>
+                <div
+                  class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="swiper__button swiper__button_prev"
+            id="swiper-designs__prev-id2"
+            aria-label="previous slide"
+          >
+            <svg
+              width="9"
+              height="15"
+              viewBox="0 0 9 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.98438 13.4297L1.98438 7.42969L7.98438 1.42969"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="swiper__button swiper__button_next"
+            id="swiper-designs__next-id2"
+            aria-label="next slide"
+          >
+            <svg
+              width="9"
+              height="15"
+              viewBox="0 0 9 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.19531 13.4297L7.19531 7.42969L1.19531 1.42969"
+                stroke="#00204A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!--Bunner-->
+
+      <section class="bunner">
+        <div class="bunner__container">
+          <img
+            width="796"
+            height="327"
+            src="img/house9.webp"
+            alt="room"
+            class="bunner__img1"
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <div class="bunner__content">
+            <h2 class="bunner__title">
+              Trident – we love inviting interiors too!
+            </h2>
+            <p class="bunner__text">
+              Our architects have prepared some stunning ready-made interior
+              designs...check them out...
+            </p>
+          </div>
+          <img
+            src="img/room-bunner.webp"
+            alt="room"
+            width="543"
+            height="341"
+            class="bunner__img2"
+            loading="lazy"
+          />
+          <a href="#" class="bunner__link">Read more</a>
+        </div>
+      </section>
+
+      <!--features-->
+
+      <section class="features">
+        <div class="features__container">
+          <div class="features__content">
+            <h2 class="features__title">
+              Trident Modular Housing produce and assemble modular houses that
+              are very high quality and they can be used as temporary as well as
+              permanent residence.
+            </h2>
+            <ul class="features__items">
+              <li class="features__item">
+                <h3 class="features__item-title">quality</h3>
+                <p class="features__item-text">
+                  A quality flexible modular housing solutionset nd they can be
+                  used as temporary as well as permanent residence.
+                </p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__item-title">design</h3>
+                <p class="features__item-text">
+                  Bespoke, contemporary design capabilities with customization.
+                  nd they can be used as temporary as well as permanent
+                  residence.
+                </p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__item-title">PRICE</h3>
+                <p class="features__item-text">
+                  Low price and quick assembly.housing solutionset nd they can
+                  be used as temporary as well as permanent residence.
+                </p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__item-title">choice</h3>
+                <p class="features__item-text">
+                  You can choose from our standard range of products nd they can
+                  be used as temporary as well as permanent residence.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <img
+            src="img/house6.webp"
+            alt="house"
+            class="features__img"
+            loading="lazy"
+            width="469"
+            height="598"
+          />
+        </div>
+      </section>
+
+      <!--Order-->
+
+      <section class="order">
+        <div class="order__container">
+          <div class="order__content">
+            <h2 class="order__title">Order our catalogue for free</h2>
+            <p class="order__text">
+              Lorem ipsim dolor set amet lorem ipsim dolor set amet lorem ipsim
+              dolor set amet
+            </p>
+            <a href="./catalog.html" class="order__link order__link_desktop"
+              >Order now</a
+            >
+          </div>
+          <img
+            src="img/book.webp"
+            alt="book"
+            class="order__img"
+            loading="lazy"
+            width="853"
+            height="339"
+          />
+          <a href="./catalog.html" class="order__link order__link_mobile"
+            >Order now</a
+          >
+        </div>
+      </section>
+
+      <!--showcase-->
+
+      <section class="showcase">
+        <div class="swiper showcase__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="showcase__link"
+                ><img
+                  src="img/house3.webp"
+                  alt="house"
+                  class="showcase__img"
+                  loading="lazy"
+                  width="386"
+                  height="218"
+              /></a>
+
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="showcase__link"
+                ><img
+                  src="img/house4.webp"
+                  width="386"
+                  alt="house"
+                  class="showcase__img"
+                  loading="lazy"
+              /></a>
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="showcase__link"
+                ><img
+                  src="img/house5.webp"
+                  alt="house"
+                  class="showcase__img"
+                  width="386"
+                  loading="lazy"
+              /></a>
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="showcase__link"
+                ><img
+                  src="img/house2.webp"
+                  width="386"
+                  alt="house"
+                  class="showcase__img"
+                  loading="lazy"
+              /></a>
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <button
+          class="swiper__button swiper__button_prev"
+          id="swiper-showcase__prev-id"
+          aria-label="precious slide"
+        >
+          <svg
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.98438 13.4297L1.98438 7.42969L7.98438 1.42969"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          class="swiper__button swiper__button_next"
+          id="swiper-showcase__next-id"
+          aria-label="next slide"
+        >
+          <svg
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.19531 13.4297L7.19531 7.42969L1.19531 1.42969"
+              stroke="#00204A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <include src="src/handlers/footer.html"></include>
+    <script type="module" src="scripts/carrusel.js"></script>
+  </body>
+</html>

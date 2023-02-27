@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  border: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--color-secondary);
+  font-family: Lato, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+aside,
+article,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+section,
+header,
+footer,
+main,
+nav,
+ul,
+article,
+aside {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+label {
+  cursor: pointer;
+}

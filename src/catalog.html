@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trident - Catalog</title>
+    <meta name="description" content="Houses" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="#f5f5f5" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles/fontello.scss" />
+    <link rel="stylesheet" href="styles/global.scss" />
+    <link rel="stylesheet" href="styles/header.scss" />
+    <link rel="stylesheet" href="styles/footer.scss" />
+    <link rel="stylesheet" href="styles/catalog.scss" />
+    <link
+      rel="preload"
+      href="fonts/Lato-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=fabd8cb0-787f-4101-966f-32e87049c9cd&lang=en_US"
+      type="module"
+    ></script>
+    <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="scripts/catalog.js"></script>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+
+    <include src="src/handlers/header.html"></include>
+    <!-- MAIN SECTION -->
+
+    <main class="main container">
+      <section class="catalog">
+        <div class="catalog__heading">
+          <h1 class="catalog__title">Catalog</h1>
+          <p class="catalog__subtitle">YOU CAN CHOOSE house THAT YOU LIKE</p>
+        </div>
+        <div class="catalog__container">
+          <form action="./catalog.html" method="get" class="catalog__filter">
+            <p class="form__title">SEARCH</p>
+            <div class="form__content">
+              <div role="group" class="form__type">
+                <div class="group__title">House type</div>
+                <label class="form__label">
+                  <input
+                    type="checkbox"
+                    name="bungalows"
+                    class="form__checkbox"
+                  />
+                  Bungalows
+                </label>
+                <label class="form__label">
+                  <input
+                    type="checkbox"
+                    name="storey2"
+                    class="form__checkbox"
+                  />
+                  2-storey houses
+                </label>
+                <label class="form__label">
+                  <input
+                    type="checkbox"
+                    name="story15"
+                    class="form__checkbox"
+                  />
+                  1.5-storey houses
+                </label>
+                <label class="form__label">
+                  <input
+                    type="checkbox"
+                    name="garages"
+                    class="form__checkbox"
+                  />
+                  Garages and carports
+                </label>
+              </div>
+              <div class="group__title">special house designs</div>
+              <label class="form__label">
+                <input
+                  type="checkbox"
+                  name="gravenhill"
+                  class="form__checkbox"
+                />
+                graven hill
+              </label>
+              <div class="group__title">Usable area</div>
+              <input
+                class="form__number"
+                type="number"
+                name="areaMin"
+                placeholder="from"
+                min="20"
+                max="400"
+              />
+              <span class="form__to">-</span>
+              <input
+                class="form__number"
+                type="number"
+                name="areaMax"
+                placeholder="to"
+                min="20"
+                max="400"
+              />
+              <div class="group__title">Number of rooms</div>
+              <input
+                class="form__number"
+                type="number"
+                name="roomsMin"
+                placeholder="from"
+                min="1"
+                max="10"
+              />
+              <span class="form__to">-</span>
+              <input
+                class="form__number"
+                type="number"
+                name="roomsMax"
+                placeholder="to"
+                min="1"
+                max="10"
+              />
+              <div class="group__title">Number of bathrooms</div>
+              <label class="form__label">
+                <input
+                  class="form__number form__number_buth"
+                  type="number"
+                  name="buthroomsMin"
+                  placeholder="Choose number"
+                  min="1"
+                  max="10"
+              /></label>
+              <div role="group" class="form__type form__type_garage">
+                <div class="group__title">House type</div>
+                <label class="form__label">
+                  <input type="radio" name="garage" class="form__checkbox" />
+                  yes
+                </label>
+                <label class="form__label">
+                  <input type="radio" name="garage" class="form__checkbox" />
+                  no
+                </label>
+              </div>
+            </div>
+            <div class="form__buttons">
+              <button class="form__reset" type="reset">CLEARE</button>
+              <button class="form__submit" type="submit">FILTER</button>
+            </div>
+          </form>
+          <div class="catalog__content">
+            <button type="button" class="filter__mobile">FILTER</button>
+            <form action="./catalog.html">
+              <select class="catalog__sort" name="sort" id="sortID">
+                <option value="form-filter?name">Sort by name</option>
+                <option value="form-filter?popular">Sort by popular</option>
+                <option value="form-filter?price">Sort by price</option>
+              </select>
+              <button type="submit" hidden data-sort></button>
+            </form>
+            <div class="catalog__gellary">
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house4.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Salon</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                  loading="lazy"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+              <article class="card">
+                <img
+                  src="img/house2.webp"
+                  width="434"
+                  height="246"
+                  alt="house"
+                  class="card__img"
+                  loading="lazy"
+                />
+                <h2 class="card__title">Garden Room</h2>
+                <p class="card__text">
+                  A room where you can work, study, and design
+                </p>
+              </article>
+            </div>
+            <div class="catalog__pagination">
+              <a href="#" class="pagination__link">&lt;</a>
+              <a href="#" class="pagination__link">1</a>
+              <span class="pagination__link pagination__link_active">2</span>
+              <a href="#" class="pagination__link">···</a>
+              <a href="#" class="pagination__link">4</a>
+              <a href="#" class="pagination__link">&gt;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <include src="src/handlers/footer.html"></include>
+  </body>
+</html>

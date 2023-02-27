@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trident - Gellary</title>
+    <meta name="description" content="Houses" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="#f5f5f5" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles/fontello.scss" />
+    <link rel="stylesheet" href="styles/global.scss" />
+    <link rel="stylesheet" href="styles/header.scss" />
+    <link rel="stylesheet" href="styles/footer.scss" />
+    <link rel="stylesheet" href="styles/gellary.scss" />
+    <link
+      rel="preload"
+      href="fonts/Lato-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="scripts/gellary.js"></script>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+
+    <include src="src/handlers/header.html"></include>
+    <!-- MAIN SECTION -->
+
+    <main class="main container">
+      <div class="gellary">
+        <h1 class="gellary__title">Gellary</h1>
+        <form class="gellary__filters" action="gellary.html" method="get">
+          <label class="gellary__label">
+            <select class="gellary__select" name="model" id="modelID">
+              <option value="all" selected>CHOOSE MODEL</option>
+              <option value="model1">model 1</option>
+              <option value="model2">model 2</option>
+              <option value="model3">model 3</option>
+              <option value="model4">model 4</option>
+            </select></label
+          ><label class="gellary__label">
+            <select class="gellary__select" name="interior" id="interiorID">
+              <option value="all" selected>CHOOSE INTERIOR</option>
+              <option value="interior1">interrior 1</option>
+              <option value="interior2">interrior 2</option>
+              <option value="interior3">interrior 3</option>
+              <option value="interior4">interrior 4</option>
+            </select></label
+          >
+          <button
+            type="submit"
+            aria-hidden="false"
+            class="gellary__submit"
+            hidden
+          ></button>
+        </form>
+      </div>
+      <div class="pictures">
+        <img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        /><img
+          src="img/house5.webp"
+          alt="house"
+          class="pictures__img"
+          width="400"
+          height="300"
+          loading="lazy"
+        />
+      </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <include src="src/handlers/footer.html"></include>
+  </body>
+</html>

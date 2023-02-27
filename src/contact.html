@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trident - Contact</title>
+    <meta name="description" content="Houses" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="#f5f5f5" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles/fontello.scss" />
+    <link rel="stylesheet" href="styles/global.scss" />
+    <link rel="stylesheet" href="styles/header.scss" />
+    <link rel="stylesheet" href="styles/footer.scss" />
+    <link rel="stylesheet" href="styles/contact.scss" />
+    <link
+      rel="preload"
+      href="fonts/Lato-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Lato-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=fabd8cb0-787f-4101-966f-32e87049c9cd&lang=en_US"
+      type="module"
+    ></script>
+    <script src="scripts/map.js" type="module"></script>
+    <script type="module" src="scripts/app.js"></script>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+
+    <include src="src/handlers/header.html"></include>
+    <!-- MAIN SECTION -->
+
+    <main class="main">
+      <div id="map"></div>
+      <div class="contact__container container">
+        <div class="contact__wrap">
+          <article class="contact">
+            <h1 class="contact__title">Contact us</h1>
+            <p class="contact__address">Forpeople Studio</p>
+            <p class="contact__address">1 Space Street</p>
+            <p class="contact__address">New York, NY-90814</p>
+            <p class="contact__mail contact__address">
+              Email:
+              <a
+                href="mailto:hello@forpeople.studio"
+                type="Email"
+                class="contact__link_mail"
+                >hello@forpeople.studio</a
+              >
+            </p>
+            <p class="contact__link contact__address">
+              Tel:
+              <a href="tel:+1-800-999-800" type="Tel" class="contact__link_tel"
+                >+1-800-999-800</a
+              >
+            </p>
+          </article>
+        </div>
+      </div>
+      <section class="form">
+        <div class="form__caption">
+          <h2 class="form__title">Leave a request and we will contact you</h2>
+          <p class="form__text">
+            A Trident garden room can transform your garden into a place that
+            you will use all year round, also adding
+          </p>
+        </div>
+        <form action="#" method="post">
+          <label class="form__label">
+            Your name
+            <input type="text" placeholder="Name" name="name" required />
+          </label>
+          <label class="form__label"
+            >Your Phone
+            <input type="tel" placeholder="Phone" name="phone" required />
+          </label>
+          <label class="form__label"
+            >Your E-mail
+            <input type="email" name="email" placeholder="E-mail" required />
+          </label>
+          <label class="form__label"
+            >Your text
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Type message"
+              required
+            ></textarea>
+          </label>
+
+          <label class="form__label">
+            <input type="checkbox" name="agree" />
+            <span class="checkbox__text"
+              >I agree that TRIDENT can contact me to send me the Catalogue of
+              houses.</span
+            >
+          </label>
+          <label class="form__label">
+            <input type="checkbox" name="receive" />
+            <span class="checkbox__text"
+              >I wish to receive information about open house events, other
+              materials relevant to my interests and news via Newsletter from
+              TRIDENT</span
+            >
+          </label>
+          <p class="form__description">
+            By submitting your information you confirm that you have read the
+            Privacy Policy which contains instructions regarding the right of
+            access to your data, the possibility of rectifying it and the right
+            to lodge a complaint with a supervisory authority. Your consent may
+            be revoked at any time by sending an e-mail to dpo@danwood.pl, with
+            the consequence of the erasure of your contact details from the
+            distribution of our materials.
+          </p>
+          <button type="submit" class="form__submit">GET REQUEST</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <include src="src/handlers/footer.html"></include>
+  </body>
+</html>

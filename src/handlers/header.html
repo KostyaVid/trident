@@ -1,0 +1,86 @@
+<header class="header container">
+  <div class="header__logo">
+    <img
+      width="96"
+      height="59"
+      class="header__img"
+      src="img/logo.png"
+      alt="Trident"
+    />
+    <h2 class="header__title">
+      trident<span class="header_subTitle">Modular housing</span>
+    </h2>
+  </div>
+  <nav class="menu">
+    <ul class="menu-container">
+      <li class="menu-item">
+        <a href="./index.html" data-menu-item data-menu-focus>Home</a>
+      </li>
+      <li class="menu-item">
+        <a href="./about.html" data-menu-item data-menu-focus>About us</a>
+      </li>
+      <li class="menu-item">
+        <a href="./gellary.html" data-menu-item data-menu-focus>Gallery</a>
+      </li>
+      <li class="menu-item menu__dropdown">
+        <button class="header__dropdown" data-menu-item data-menu-focus>
+          Styles
+          <svg
+            width="11"
+            height="7"
+            viewBox="0 0 11 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M1.73714 1.57813L5.64787 5.48885L9.55859 1.57812"
+              stroke="#00204A"
+              stroke-width="1.56429"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <ul data-header-dropdown>
+          <li
+            data-menu-item
+            data-meny-focus
+            class="header__dropdown-item"
+            tabindex="-1"
+          >
+            Garden rooms
+          </li>
+          <li
+            tabindex="-1"
+            data-menu-item
+            data-meny-focus
+            class="header__dropdown-item"
+          >
+            Modular houses
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="./interior.html" data-menu-item data-menu-focus>Interior</a>
+      </li>
+      <li class="menu-item">
+        <a href="./contact.html" data-menu-item data-menu-focus>Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div aria-hidden="true" class="header__plug"></div>
+  <button
+    type="button"
+    class="menu-button"
+    id="menuButton"
+    data-menu-focus
+    aria-label="Open menu"
+  >
+    <span class="burger-icon"></span>
+  </button>
+  <a href="./catalog.html" class="header__order_desktop"
+    ><span>Order</span><span>Catalogue</span></a
+  >
+</header>
+<a href="#" class="header__order_mobile">Order Trident Catalogue</a>
