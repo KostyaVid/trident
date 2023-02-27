@@ -1,32 +1,10 @@
-# boilerplate-html
+# about
 
-Template based [parcel.js](https://parceljs.org)
+Multipage website
 
-## Futures
+# tools
 
--   Inline Template html
--   Normilize.css
--   Animate button Burger
--   Adaptive menu
--   True focus in the mobile menu
--   MatchMedia triggers
--   Use [parcel.js](https://parceljs.org)
-
-## Install
-
-```
-yarn install
-```
-
-## Development
-
-```
-yarn add --dev parcel
-yarn start
-```
-
-## Build
-
-```
-yarn build
-```
+- html
+- scss
+- javascript
+- parceljs
