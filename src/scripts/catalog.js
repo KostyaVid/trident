@@ -8,6 +8,7 @@ sort.addEventListener("click", () => {
   const filter = document.querySelector(".catalog__filter");
   filter.classList.add("filter_active");
   document.querySelector("html").style.overflowY = "hidden";
+  filter.style.height = window.innerHeight + "px";
 });
 
 document.querySelector(".form__reset").addEventListener("click", () => {
@@ -15,5 +16,6 @@ document.querySelector(".form__reset").addEventListener("click", () => {
   if (filter.classList.contains("filter_active")) {
     filter.classList.remove("filter_active");
     document.querySelector("html").style.overflowY = "auto";
+    filter.style.height = "auto";
   }
 });
