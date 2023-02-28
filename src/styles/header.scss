@@ -62,6 +62,22 @@
 
 .menu-item {
   color: var(--color-link);
+  position: relative;
+  &:after {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-third);
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
 }
 
 .menu-item + .menu-item {
@@ -168,6 +184,24 @@
 .header__order_desktop span + span {
   font-weight: 300;
   font-size: 0.9em;
+}
+.header__order-catalogue {
+  position: relative;
+}
+.header__order-catalogue::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+.header__order_desktop:hover {
+  .header__order-catalogue:after {
+    width: 100%;
+  }
 }
 
 .header__order_mobile {
